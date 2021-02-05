@@ -19,10 +19,18 @@ namespace Departments
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }

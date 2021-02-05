@@ -31,11 +31,12 @@ namespace Departments
         {
             this.loadFileButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // loadFileButton
             // 
-            this.loadFileButton.Location = new System.Drawing.Point(230, 142);
+            this.loadFileButton.Location = new System.Drawing.Point(235, 169);
             this.loadFileButton.Name = "loadFileButton";
             this.loadFileButton.Size = new System.Drawing.Size(160, 54);
             this.loadFileButton.TabIndex = 0;
@@ -47,12 +48,18 @@ namespace Departments
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(183, 35);
+            this.title.Location = new System.Drawing.Point(195, 20);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(244, 25);
             this.title.TabIndex = 1;
             this.title.Text = "Department Database";
             this.title.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Archivos CSV(*.csv)|*.csv";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -62,7 +69,7 @@ namespace Departments
             this.Controls.Add(this.title);
             this.Controls.Add(this.loadFileButton);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Department Database";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,6 +79,7 @@ namespace Departments
 
         private System.Windows.Forms.Button loadFileButton;
         private System.Windows.Forms.Label title;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
