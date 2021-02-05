@@ -1,0 +1,10 @@
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\bin\Debug\Departments.exe.config
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\bin\Debug\Departments.exe
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\bin\Debug\Departments.pdb
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.csprojAssemblyReference.cache
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.Form1.resources
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.Properties.Resources.resources
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.csproj.GenerateResource.cache
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.csproj.CoreCompileInputs.cache
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.exe
+C:\Users\prestamo\Documents\GitHub\Workshop-C-\Departments\obj\Debug\Departments.pdb
