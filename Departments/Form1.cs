@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Departments
 {
@@ -21,7 +22,16 @@ namespace Departments
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                using (var reader = new StreamReader(openFileDialog1.FileName))
+                {
+                    String raw = reader.ReadLine();
+                    while (raw!=null)
+                    {
+                        raw = reader.ReadLine();
+                        string[] report = raw.Split(';');
+                        
+                    }
+                }
             }
         }
 
