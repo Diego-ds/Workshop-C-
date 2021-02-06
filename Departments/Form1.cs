@@ -45,17 +45,6 @@ namespace Departments
                     }
                 }
             }
-            string a = "";
-            string b = "";
-            Hashtable tolimita = manager.getDeps();
-            foreach (DictionaryEntry element in tolimita)
-            {
-                Department ola = (Department)element.Value;
-                a += ola.getName() + ",";
-                b += ola.getCode() + ",";
-            }
-            test.Text = a;
-            test2.Text = b;
         }
 
         private void label1_Click(object sender, EventArgs e)
