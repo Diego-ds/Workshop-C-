@@ -32,6 +32,8 @@ namespace Departments
             this.loadFileButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.test = new System.Windows.Forms.Label();
+            this.test2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loadFileButton
@@ -61,11 +63,31 @@ namespace Departments
             this.openFileDialog1.Filter = "Archivos CSV(*.csv)|*.csv";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // test
+            // 
+            this.test.AutoSize = true;
+            this.test.Location = new System.Drawing.Point(1, 60);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(136, 13);
+            this.test.TabIndex = 2;
+            this.test.Text = "Aqui aparece el primer dpto";
+            // 
+            // test2
+            // 
+            this.test2.AutoSize = true;
+            this.test2.Location = new System.Drawing.Point(13, 77);
+            this.test2.Name = "test2";
+            this.test2.Size = new System.Drawing.Size(35, 13);
+            this.test2.TabIndex = 3;
+            this.test2.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 368);
+            this.ClientSize = new System.Drawing.Size(985, 368);
+            this.Controls.Add(this.test2);
+            this.Controls.Add(this.test);
             this.Controls.Add(this.title);
             this.Controls.Add(this.loadFileButton);
             this.Name = "Form1";
@@ -80,6 +102,8 @@ namespace Departments
         private System.Windows.Forms.Button loadFileButton;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label test;
+        private System.Windows.Forms.Label test2;
     }
 }
 

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -13,26 +13,49 @@ namespace Departments
 {
     public partial class Form1 : Form
     {
+        private Manager manager;
         public Form1()
         {
+            manager = new Manager();
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool flag = true;
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 using (var reader = new StreamReader(openFileDialog1.FileName))
                 {
                     String raw = reader.ReadLine();
-                    while (raw!=null)
+                    while (raw!=null && flag)
                     {
                         raw = reader.ReadLine();
-                        string[] report = raw.Split(';');
-                        
+                        string[] report = raw.Split(',');
+                        if (report[0].Equals("Fuente: DANE."))
+                        {
+                            flag = false;
+                        }
+                        else
+                        {
+                            manager.addDepartment(report[2], report[0]);
+                            manager.addMunicipality(report[0], report[3], report[1], report[4]);
+                        }
                     }
                 }
             }
+            string a = "";
+            string b = "";
+            Hashtable tolimita = manager.getDeps();
+            foreach (DictionaryEntry element in tolimita)
+            {
+                Department ola = (Department)element.Value;
+                a += ola.getName() + ",";
+                b += ola.getCode() + ",";
+            }
+            test.Text = a;
+            test2.Text = b;
         }
 
         private void label1_Click(object sender, EventArgs e)

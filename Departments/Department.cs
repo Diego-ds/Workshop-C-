@@ -24,5 +24,15 @@ namespace Departments
         {
             municipalities.Add(new Municipality(name, code, type));
         }
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public string getCode()
+        {
+            return code;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace Departments
 {
     class Manager
     {
-        private Hashtable deps { get; set; }
+        private Hashtable deps;
 
         public Manager()
         {
@@ -30,6 +30,9 @@ namespace Departments
             temp.AddMunicipality(name, code, type);
         }
 
-
+        public Hashtable getDeps()
+        {
+            return deps;
+        }
     }
 }
