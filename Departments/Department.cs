@@ -11,6 +11,9 @@ namespace Departments
     {
         private string code { get; set; }
         private string name { get; set; }
+
+        private int Length { get; set; }
+
         private List<Municipality> municipalities { get; set; }
 
         public Department(string code,string name)
@@ -18,11 +21,13 @@ namespace Departments
             this.code = code;
             this.name = name;
             municipalities = new List<Municipality>();
+            this.Length = 0;
         }
 
         public void AddMunicipality(string name,string code,string type)
         {
             municipalities.Add(new Municipality(name, code, type));
+            Length++;
         }
 
         public string getName()
@@ -33,6 +38,15 @@ namespace Departments
         public string getCode()
         {
             return code;
+        }
+        public List<Municipality> GetMunicipalities()
+        {
+            return municipalities;
+        }
+
+        public int getSize()
+        {
+            return Length;
         }
     }
 }

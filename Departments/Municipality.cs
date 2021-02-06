@@ -18,5 +18,20 @@ namespace Departments
             this.type = type;
             this.code = code;
         }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+        public string GetCode()
+        {
+            return code;
+        }
+
+        public string Gettype()
+        {
+            return type;
+        }
     }
 }
