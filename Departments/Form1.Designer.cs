@@ -163,15 +163,16 @@ namespace Departments
             this.chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(302, 231);
+            this.chart.Location = new System.Drawing.Point(28, 242);
             this.chart.Name = "chart";
+            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(324, 262);
+            this.chart.Size = new System.Drawing.Size(862, 502);
             this.chart.TabIndex = 4;
             this.chart.Text = "chart1";
             // 
@@ -190,7 +191,7 @@ namespace Departments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 522);
+            this.ClientSize = new System.Drawing.Size(913, 756);
             this.Controls.Add(this.graphButton);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.comboBox);

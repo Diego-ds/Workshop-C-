@@ -19,10 +19,6 @@ namespace Departments
         {
             manager = new Manager();
             InitializeComponent();
-            chart.Titles.Add("Departments");
-            chart.Series["s1"].Points.AddXY("1", "34");
-            chart.Series["s1"].Points.AddXY("2", "33");
-            chart.Series["s1"].Points.AddXY("3", "23");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,8 +84,16 @@ namespace Departments
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
-            
+            chart.Titles.Add("Departments");
+            chart.Series["Series1"].IsValueShownAsLabel = true;
+
+            Hashtable temp = manager.getDeps();
+            foreach (DictionaryEntry element in temp)
+            {
+                Department dep = (Department)element.Value;
+                chart.Series["Series1"].Points.AddXY(dep.getName(), dep.getSize());
+            }
+
         }
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
